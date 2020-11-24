@@ -36,6 +36,7 @@ router.get('/', (req, res, next) => {
     Promise.resolve(list)
     .then((select) => {
         films.nav = select;
+        films.charList = '';
         res.render('index', films)
     })
 })
